@@ -1,6 +1,7 @@
 
 class Person
 
+  def index
   name = 'niiyama'
   kana = 'にいやま'
   age = 20
@@ -9,6 +10,7 @@ class Person
 
   self.say_hello(name,kana,age,sex)
 
+  end
 
   def say_hello(name,kana,age,sex)
 
