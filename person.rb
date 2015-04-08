@@ -1,3 +1,5 @@
+# age はintで指定してあげてください。
+
 class Person
 
   attr_accessor :name, :kana, :age, :sex
@@ -5,16 +7,12 @@ class Person
   def say_hello 
 
     if sex == "男性"
-      put "私の名前は#{name}です。ちょっと難しいですが、#{kana}と呼びます。\r\n今年で#{age}歳になる、ちょっと暴れん坊の男の子です。"
-
-
+      put "私の名前は#{name}です。ちょっと難しいですが、#{kana}と呼びます。\r\n今年で#{age.to_s}歳になる、ちょっと暴れん坊の男の子です。"
     elsif sex == "女性"
-      put "私の名前は#{name}です。ちょっと難しいですが、#{kana}と呼びます。\r\n今年で#{age}歳になる、ちょっとやんちゃな女の子です。"
-
+      put "私の名前は#{name}です。ちょっと難しいですが、#{kana}と呼びます。\r\n今年で#{age.to_s}歳になる、ちょっとやんちゃな女の子です。"
     else 
       put "性別どないしたよ。"
     end
-
   end 
 
 
