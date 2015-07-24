@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Casyusers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Userid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @casyusers.each do |casyuser| %>
+      <tr>
+        <td><%= casyuser.name %></td>
+        <td><%= casyuser.userid %></td>
+        <td><%= link_to 'Show', casyuser %></td>
+        <td><%= link_to 'Edit', edit_casyuser_path(casyuser) %></td>
+        <td><%= link_to 'Destroy', casyuser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Casyuser', new_casyuser_path %>
