@@ -1,0 +1,22 @@
+<%= form_tag(action: 'regist',method: 'post')%>
+
+ユーザ名<br />
+<input type="text" id="user" name="user"><br />
+コメント<br />
+<textarea id="comment" name="comment"></textarea><br />
+<input type="submit" value="送信する">
+<br />
+<br />
+  <table border="1">
+    <tr>
+      <td>ユーザ名</td>
+      <td>コメント</td>
+    </tr>
+    <% @list.each do |comment|%>
+      <tr>
+        <td><%= comment.user %></td>
+        <td><%= comment.comment %></td>
+      </tr>
+    <% end %>
+  </table>
+</form>
